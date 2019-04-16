@@ -1,12 +1,12 @@
-require './lib/main'
+#require './lib/main'
 require './lib/game'
 require './lib/board'
-#require './lib/player'
+require './lib/player'
 
 describe Game do
-  let (:player1) {name:"Phil", token:"X"}
-  let (:player2) {name:"Sean", token:"O"}
   let (:board) {Board.new}
+  let (:player1) {Player.new('Player_1', x = nil,board)}
+  let (:player2) {Player.new('Player_2',x = player1.token,board)}
   subject(:game){Game.new(player1,player2,board)}
 
   describe '#switch_player' do
@@ -40,7 +40,8 @@ describe Board do
 end
 
 describe Player do
-  subject (:player){Player.new('Ron', 'x')}
+  let (:board) {Board.new} 
+  subject (:player){Player.new('Player_1', x = nil,board)}
 
   describe '#add_cell' do
     it "updates the player's list of cells taken" do
