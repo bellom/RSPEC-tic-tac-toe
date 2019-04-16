@@ -1,13 +1,7 @@
-require './lib/main'
-require './lib/game'
-require './lib/board'
-#require './lib/player'
+require './game.rb'
 
 describe Game do
-  let (:player1) {name:"Phil", token:"X"}
-  let (:player2) {name:"Sean", token:"O"}
-  let (:board) {Board.new}
-  subject(:game){Game.new(player1,player2,board)}
+  subject(:game){Game.new()}
 
   describe '#switch_player' do
     it "changes current_player to the other player" do
