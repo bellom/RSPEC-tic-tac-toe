@@ -19,11 +19,4 @@ class Board
     @board_values[location - 1] = token
   end
 
-  class Factorial
-    def factorial_of(n)
-      (1..n).inject(:*)
-    end
-  end
-
 end
-
