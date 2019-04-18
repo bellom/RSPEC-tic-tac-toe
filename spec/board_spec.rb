@@ -7,9 +7,3 @@ describe "#update_field_values" do
         expect(@board.board_values[0]).to eql("x")
     end
 end
-
-
-
-def update_field_values (token, location)
-    @board_values[location - 1] = token
-  end

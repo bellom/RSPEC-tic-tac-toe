@@ -4,7 +4,7 @@ class Board
 
   def initialize
     @legend_values = ["1","2","3","4","5","6",'7',"8","9"]
-    @board_values = Array.new(9, " ") 
+    @board_values = Array.new(9, " ")
   end
 
   def draw_board (field_values)
@@ -17,6 +17,17 @@ class Board
 
   def update_field_values (token, location)
     @board_values[location - 1] = token
+  end
+
+  def populate_display
+    puts
+    puts "LEGEND:"
+    draw_board(@legend_values)
+    puts "Use the legend to pick a space!"
+    puts
+    puts "GAME BOARD:"
+    draw_board(@board_values)
+    puts
   end
 
 end
