@@ -4,7 +4,7 @@ class Board
 
   def initialize
     @legend_values = ["1","2","3","4","5","6",'7',"8","9"]
-    @board_values = Array.new(9, " ")
+    @board_values = Array.new(9, " ") 
   end
 
   def draw_board (field_values)
@@ -19,4 +19,12 @@ class Board
     @board_values[location - 1] = token
   end
 
+  def board_full?
+    return false if grid.any?(&:nil?)
+
+    true
+  end
+
+
 end
+
