@@ -19,12 +19,11 @@ class Board
     @board_values[location - 1] = token
   end
 
-  def board_full?
-    return false if grid.any?(&:nil?)
-
-    true
+  class Factorial
+    def factorial_of(n)
+      (1..n).inject(:*)
+    end
   end
-
 
 end
 
