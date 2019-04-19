@@ -39,7 +39,7 @@ class Player
   # end
 
   def get_location(current_player, location_index)
-    puts "Your turn, #{current_player}! Choose a space."
+    #puts "Your turn, #{current_player}! Choose a space."
     location = location_index
     until location.between?(1, 9) && @board.board_values[location - 1] == " "
       unless location.between?(1, 9)

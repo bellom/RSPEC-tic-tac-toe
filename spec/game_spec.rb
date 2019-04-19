@@ -17,4 +17,22 @@ describe Game do
         end
     end
 
+    describe '#switch_player' do
+        it 'changes the current player' do
+            result = @game.switch_player
+            expect(result.name).to eql('dip') 
+        end
+    end
+
+    describe '#over' do 
+        it 'checks if game has ended' do
+            @current_player = @player_2
+            @current_player.add_cell(1)
+            @current_player.add_cell(4)
+            @current_player.add_cell(7)
+            result = @game.over?           
+            expect(result).to be true 
+        end
+    end    
+
 end
