@@ -10,11 +10,11 @@ class Game
     @board.populate_display
   end
 
-  def play_turn
-    location = @current_player.get_location(current_player.name)
+  def play_turn(location_index)
+    location = @current_player.get_location(current_player.name, location_index)
     board.update_field_values(current_player.token, location)
     current_player.add_cell(location)
-    @board.populate_display
+    # @board.populate_display
   end
 
   def switch_player
