@@ -4,5 +4,6 @@ module Game_cycle
             game_obj.switch_player
             game_obj.play_turn
         end
+        game_obj.over?
     end
 end
